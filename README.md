@@ -1,4 +1,4 @@
-# qx-extraordinary-lab  (Round 7)
+# qx-extraordinary-lab 
 
 Cases no earlier round covered: Python import tricks, keys built from raw numbers,
 weak parameters and insecure randomness, crypto run through other processes,
