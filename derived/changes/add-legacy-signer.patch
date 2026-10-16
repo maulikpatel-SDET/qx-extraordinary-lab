@@ -1,0 +1,18 @@
+From 1a2b3c4d Mon Sep 17 00:00:00 2001
+Subject: [PATCH] R7-26 add legacy RSA signer (NOT applied to this repo)
+
+---
+ app/legacy_signer.py | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/app/legacy_signer.py b/app/legacy_signer.py
+new file mode 100644
+--- /dev/null
++++ b/app/legacy_signer.py
+@@ -0,0 +1,6 @@
++from cryptography.hazmat.primitives import hashes
++from cryptography.hazmat.primitives.asymmetric import padding, rsa
++
++key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
++def sign(d):
++    return key.sign(d, padding.PKCS1v15(), hashes.SHA256())

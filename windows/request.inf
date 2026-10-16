@@ -1,0 +1,9 @@
+; R7-16 Windows certreq INF: key algorithm and length for a CSR.
+[NewRequest]
+Subject = "CN=legacy.qx.example.com"
+KeyAlgorithm = RSA
+KeyLength = 2048
+HashAlgorithm = SHA1
+Exportable = TRUE
+MachineKeySet = TRUE
+ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
